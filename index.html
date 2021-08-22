@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description"
+        content="The platform that provides you with periodic model performance reports and comparative charts">
+  <meta name="google" content="notranslate" />
+  <meta name="author" content="ML-TestHub">
+  <!-- Disable IE tap highlight (bad look) -->
+  <meta name="msapplication-tap-highlight" content="no">
+  <link rel="stylesheet" href="./style.css">
+  <!-- Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="./assets/icons/site.webmanifest">
+  <link rel="mask-icon" href="./assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#603cba">
+  <meta name="theme-color" content="#ffffff">
+  <title>ML-TestHub</title>
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-default active">
+      <div class="container">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html" title="">
+            <img src="./assets/icons/mltesthub-icon.svg" class="navbar-logo-img" alt="">
+            ML-TestHub
+          </a>
+        </div>
+  
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <!-- Home button redundant at the time being but could be useful if embedding charts in css-styled pages -->
+            <li><a href="./index.html" title="">Home</a></li>
+            <li><a href="#contact-form" title="">Contact</a></li>
+            <li>
+              <p>
+                <!-- wip -->
+                <a href="" class="btn btn-default navbar-btn" title="">Donate</a>
+              </p>
+            </li>
+          </ul>
+        </div> 
+      
+      </div>
+    </nav>
+  </header>
+
+  <div class="hero-full-container background-image-container white-text-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>Machine Learning Testing Hub</h1>
+          <p>The platform that provides you with periodic model performance reports and comparative charts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-container">
+    <h2 class="text-center">Current test: AWS and Azure OCR models</h2>
+
+    <div class="container">
+      <div class="row">      
+        <div class="col-xs-12 col-md-12">
+          <div class="card-container">
+            <div class="card card-shadow reveal">
+              <div id="dataset-carousel" class="carousel carousel-fade slide" data-ride="carousel">
+                <h3 class="text-center">Dataset statistics</h3>
+                <div class="carousel-inner" role="listbox">
+
+                  <div class="item active">
+                    <object data="./charts/ocr/dataset/dataset_image_statistics.html" width="100%" height="550"></object>
+                    <div class="carousel-caption">
+                      <h4>Image statistics</h4>
+                      <a class="left carousel-control" href="#dataset-carousel" role="button" data-slide="prev">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#dataset-carousel" role="button" data-slide="next">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <object data="./charts/ocr/dataset/dataset_text_statistics.html" width="100%" height="550"></object>
+                    <div class="carousel-caption">
+                      <h4>Text statistics</h4>
+                      <a class="left carousel-control" href="#dataset-carousel" role="button" data-slide="prev">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#dataset-carousel" role="button" data-slide="next">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">      
+        <div class="col-xs-12 col-md-12">
+          <div class="card-container">
+            <div class="card card-shadow reveal">
+              <div id="model-carousel" class="carousel carousel-fade slide" data-ride="carousel">
+                <h3 class="text-center">Model statistics</h3>
+                <div class="carousel-inner" role="listbox">
+
+                  <div class="item active">
+                    <object data="./charts/ocr/model/accuracy_barplot.html" width="100%" height="550"></object>
+                    <div class="carousel-caption">
+                      <h4>Accuracy barplot</h4>
+                      <a class="left carousel-control" href="#model-carousel" role="button" data-slide="prev">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#model-carousel" role="button" data-slide="next">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <object data="./charts/ocr/model/correlation_matrix.html" width="100%" height="550"></object>
+                    <div class="carousel-caption">
+                      <h4>Correlation matrix</h4>
+                      <a class="left carousel-control" href="#model-carousel" role="button" data-slide="prev">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#model-carousel" role="button" data-slide="next">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <object data="./charts/ocr/model/similarity_barplot.html" width="100%" height="550"></object>
+                    <div class="carousel-caption">
+                      <h4>Similarity barplot</h4>
+                      <a class="left carousel-control" href="#model-carousel" role="button" data-slide="prev">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#model-carousel" role="button" data-slide="next">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <object data="./charts/ocr/model/similarity_histogram.html" width="100%" height="550"></object>
+                    <div class="carousel-caption">
+                      <h4>Similarity histogram</h4>
+                      <a class="left carousel-control" href="#model-carousel" role="button" data-slide="prev">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#model-carousel" role="button" data-slide="next">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+
+  <!-- todo: decide wether to keep the contact form or replace it with some useful informative section -->
+  <div id="contact-form" class="section-container contact-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-10 col-md-offset-1">
+          <div class="section-container-spacer">
+            <h2 class="text-center">Get in touch</h2>
+            <p class="text-center">Send us a message for further information about this project.</p>
+          </div>
+          <div class="card-container">
+            <div class="card card-shadow col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 reveal">
+              <form class="reveal-content" method="post" action="">
+                <div class="row">
+                  <!--
+                  <div class="col-md-7">
+                    <div class="form-group">
+                      <input type="email" class="form-control" id="Email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="Name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form-control" id="Message" rows="3" maxlength="3000" placeholder="Enter your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send message</button>
+                  </div>
+                -->
+                  <div class="col-md-10">
+                    <ul class="list-unstyled address-container">
+                      <li>
+                        <span class="fa-icon">
+                          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        </span>
+                        <a class="fa-contact" href="mailto:humailabs@gmail.com?subject=Request%20for%20information" target="_blank">humailabs@gmail.com</a>
+                      </li>
+                      <li>
+                        <span class="fa-icon">
+                          <i class="fa fa fa-telegram" aria-hidden="true"></i>
+                        </span>
+                        <a class="fa-contact" href="https://web.telegram.org" target="_blank">ml-testhub on Telegram</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+      navbarFixedTopAnimation();
+    });
+  </script>
+
+  <footer class="footer-container white-text-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>ml-testhub</h3>
+          <div class="row">
+            <div class="col-xs-12 col-sm-7">
+              <p>
+                <small>The project is currently maintained by the
+                  <a href="https://github.com/ml-testhub" target="_blank" title="Machine Learning Testing Hub">ml-testhub</a>
+                  organization.
+                </small>
+              </p>
+            </div>
+            <div class="col-xs-12 col-sm-5">
+              <p class="text-right">
+                <a href="https://facebook.com/" target="_blank" class="social-round-icon white-round-icon fa-icon" title="">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="https://twitter.com/" target="_blank" class="social-round-icon white-round-icon fa-icon" title="">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank" class="social-round-icon white-round-icon fa-icon" title="">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+      navActivePage();
+      scrollRevelation('.reveal');
+    });
+  </script>
+
+  <script src="./style-script.js"></script>
+
+</body>
+</html>
